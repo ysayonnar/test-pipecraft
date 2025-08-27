@@ -1,0 +1,15 @@
+jobs:
+  build:
+    - name: "building image"
+      run: "docker build -t myapp ."
+
+    - name: "running container"
+      run: "docker run -it myapp"
+
+  test:
+    - name: "tests"
+      run: "go test ."
+
+  exec:
+    - name: "exec"
+      run: "go run main.go"
