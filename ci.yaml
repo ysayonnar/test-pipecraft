@@ -2,7 +2,7 @@ jobs:
   deps:
     steps:
       - name: "installig go"
-        run: "apk add --no-cache get"
+        run: "apk add --no-cache go"
 
   testing:
     steps:
