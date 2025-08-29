@@ -1,18 +1,15 @@
 jobs:
-  build:
+  deps:
     steps:
-      - name: "building image"
-        run: "docker build -t myapp ."
+      - name: "installig go"
+        run: "apk add --no-cache get"
 
-      - name: "running container"
-        run: "docker run myapp"
-
-  test:
+  testing:
     steps:
-      - name: "tests"
+      - name: "executing goland tests"
         run: "go test ."
 
-  exec:
+  run:
     steps:
-      - name: "exec"
+      - name: "run main.go file"
         run: "go run main.go"
